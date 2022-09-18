@@ -5,8 +5,8 @@ from typing import Any
 def check_fitness(dict_student: dict,dict_profession: dict) -> dict:
     '''
     Проводит проверку пригодности студента, сравнивая скилы из словарей
-    :param student: номер студента из файла students.json
-    :param profession: профессия из файла professions.json
+    :param student: номер студента из файла student.json
+    :param profession: профессия из файла profession.json
     :return: итоговый словарь с данными для вывода
     '''
     student_skills: set = set(list(dict_student['skills']))
@@ -20,6 +20,11 @@ def check_fitness(dict_student: dict,dict_profession: dict) -> dict:
 
 
 def check_login(nickname: str) -> bool:
+    '''
+    Проверяет логин клиента
+    :param nickname: Ник клиента из файла student.json
+    :return: возвращает верно ли заполнен ник
+    '''
     pattern = r'(?=.*[\W])(?=.*[\d])(?=.*[A-Z])(?=^[^A-Z])(?=.*[\w]$).{4,}'
     if bool(re.search(pattern, nickname)) == True:
         return True

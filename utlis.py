@@ -3,7 +3,7 @@ from typing import Any
 
 def load_students() -> list:
     '''
-    Загружает и конвертирует в список данные из students.json
+    Загружает и конвертирует в список данные из student.json
     :return: Возвращает список
     '''
     list_students = []
@@ -15,7 +15,7 @@ def load_students() -> list:
 
 def load_professions() -> list:
     '''
-    Загружает и конвертирует в список данные из professions.json
+    Загружает и конвертирует в список данные из profession.json
     :return: Возвращает список
     '''
     list_professions = []
